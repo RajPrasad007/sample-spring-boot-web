@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="css/blog.css" />
+</head>
+<body>
+<!-- Navigation -->
+<header id="header">
+    <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/}">Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#how-it-works">How it Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/blogs}">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <div><br></div>
+    <div class="row">
+        <!--Single Blog Start-->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0ms">
+            <div class="news-item">
+                <div class="news_box">
+                    <div class="newsimg"><img class="img-responsive" src="https://blog.mdcloud.es/wp-content/uploads/2016/08/Cloud.png" alt=""></div>
+                    <div class="news-content">
+                        <div class="news_postdate">
+                            <span>Jan 03, 2019</span>
+                        </div>
+                        <a href="#">
+                            <h3>The Future of Cloud Computing</h3>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                        <div class="news_authorinfo">
+                            <span><i class="fa fa-user"></i>  <a href="">admin</a></span>
+                            <span><i class="fa fa-comment"></i> <a href="">Comments: (2)</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Single Blog End-->
+        <!--Single Blog Start-->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+            <div class="news-item active">
+                <div class="news_box">
+                    <div class="newsimg"><img class="img-responsive" src="https://www.thebalancesmb.com/thmb/opn3cUYAX4Mib7p9DnnFix0b9jE=/3437x2578/smart/filters:no_upscale()/cloud-computing-502462262-5ac1130e119fa800371ba0a8.jpg" alt=""></div>
+                    <div class="news-content">
+                        <div class="news_postdate">
+                            <span>Nov 05, 2018</span>
+                        </div>
+                        <a href="#">
+                            <h3>Benefits of using Zodd cloud</h3>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                        <div class="news_authorinfo">
+                            <span><i class="fa fa-user"></i>  <a href="">admin</a></span>
+                            <span><i class="fa fa-comment"></i> <a href="">Comments: (1)</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Single Blog End-->
+        <!--Single Blog Start-->
+        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="800ms">
+            <div class="news-item">
+                <div class="news_box">
+                    <div class="newsimg"><img class="img-responsive" src="https://www.pngitem.com/pimgs/m/268-2683348_update-upgrade-renew-improve-improvement-new-graphic-design.png" alt=""></div>
+                    <div class="news-content">
+                        <div class="news_postdate">
+                            <span>Dec 22, 2018</span>
+                        </div>
+                        <a href="#">
+                            <h3>Improvements and Upgrade</h3>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, cons ectet a ur elit. Vestibulum necod ios suspe age a to ndisse cursus mal.</p>
+                        <div class="news_authorinfo">
+                            <span><i class="fa fa-user"></i>  <a href="">Brandon Auger</a></span>
+                            <span><i class="fa fa-comment"></i> <a href="">Comments: (2)</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
