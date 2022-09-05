@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a Note</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+    <div class="container">
+        <a class="navbar-brand" href="#">ZODD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/register}">Register</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/blogs}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/information}">Info</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container my-5">
+    <h3> Add Note</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-10">
+                <form action="#" th:action="@{/createNote}" th:object="${note}"
+                      method="post">
+
+                        <div class="form-group">
+                            <div class="form-group col-md-8">
+                                <label for="title" class="col-form-label">Title</label>
+                                <input type="text" th:field="*{title}" class="form-control"
+                                       id="title" placeholder="Title" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                        <div class="form-group col-md-8">
+                            <label for="content" class="col-form-label">Content</label>
+                            <input type="text" th:field="*{content}" class="form-control"
+                                   id="content" placeholder="Content" />
+                        </div>
+                        </div>
+
+                        <div class="form-group">
+                        <div class="form-group col-md-8">
+                            <label for="createdby" class="col-form-label">Created By</label>
+                            <input type="text" th:field="*{created_by}" class="form-control"
+                                   id="createdby" placeholder="Created By" />
+                        </div>
+                        </div>
+
+                            <br>
+                            <input type="submit" class="btn btn-primary" value=" Submit "/>
+
+                        <input type="hidden" id="id" th:field="*{id}">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

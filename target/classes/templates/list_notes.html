@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+    <div class="container">
+        <a class="navbar-brand" href="#">ZODD</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/register}">Register</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/blogs}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/information}">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/notes}">Notes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container my-2">
+    <div class="card">
+        <div class="card-body">
+            <div th:switch="${notes}" class="container my-5">
+                <p class="my-5">
+                    <a href="/edit" class="btn btn-primary">
+                        <i class="fas fa-user-plus ml-2"> Add Note </i></a>
+                </p>
+                <div class="col-md-10">
+                    <h2 th:case="null">No record found !!</h2>
+                    <div th:case="*">
+                        <table class="table table-striped table-responsive-md">
+                            <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Content</th>
+                                <th>By</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="note : ${notes}">
+                                <td th:text="${note.title}"></td>
+                                <td th:text="${note.content}"></td>
+                                <td th:text="${note.created_by}"></td>
+                                <td>
+                                    <a th:href="@{/edit/{id}(id=${note.id})}"
+                                       class="btn btn-primary">
+                                        <i class="fas fa-user-edit ml-2">Edit</i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a th:href="@{/delete/{id}(id=${note.id})}"
+                                       class="btn btn-primary">
+                                        <i class="fas fa-user-times ml-2">Delete</i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

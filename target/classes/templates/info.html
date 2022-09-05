@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Information</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+  <div class="container">
+    <a class="navbar-brand" href="#">ZODD</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/register}">Register</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/blogs}">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/information}">Info</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/notes}">Notes</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container py-4">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">View your users</h1>
+      <p class="col-md-8 fs-4">With just one click, you can view your users! Isn't it cool?</p>
+      <a class="btn btn-primary btn-lg" th:href="@{/list_users}">List Users</a>
+    </div>
+  </div>
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-white bg-dark rounded-3">
+        <h2><b>Solved #1</b></h2>
+        <p>Due to the overload on the server, we created an init script named <b>webapp.service</b> which runs on startup. It will help in optimizing the server's performance.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <h2><b>File Uploading</b></h2>
+        <p>Upload your favourite files into the website. </p>
+        <a class="btn btn-primary" th:href="@{/upload}">Upload</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
