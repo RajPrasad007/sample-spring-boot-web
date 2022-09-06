@@ -8,7 +8,7 @@ phases:
       - echo Done making directories at /opt/sources
   build:
     commands:
-      - echo Building the maven package on `date`
+      - echo Building the maven package on date
       - mvn clean package
   
   post_build:
